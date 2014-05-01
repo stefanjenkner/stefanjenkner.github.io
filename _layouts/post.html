@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<h2>{{ page.title }}</h2>
+<p class="meta">{{ page.date | date_to_string }}</p>
+
+<div class="post">
+{{ content }}
+</div>
+
+<div>
+
+
+{% if page.previous %}
+	<p><a href="{{ page.previous.url }}">« {{ page.previous.title }}</a></p>
+{% endif %}
+
+{% if page.next %}
+	<p><a href="{{ page.next.url }}">{{ page.next.title }} »</a></p>
+{% endif %}
+
+</div>
