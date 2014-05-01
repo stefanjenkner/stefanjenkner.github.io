@@ -1,4 +1,4 @@
-name: A developers notebook
+name: A developer's notebook
 markdown: redcarpet
 pygments: true
 permalink: /blog/:year/:month/:day/:title

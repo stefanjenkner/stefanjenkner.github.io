@@ -1,6 +1,6 @@
 ---
 layout: default
-title: A developers notebook - about
+title: A developer's notebook - about
 ---
 
 ### Public Key (OpenPGP):
