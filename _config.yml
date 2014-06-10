@@ -2,7 +2,7 @@ name: A developer's notebook
 markdown: redcarpet
 redcarpet:
     extensions: ["tables"]
-pygments: true
+highlighter: pygments
 permalink: /blog/:year/:month/:day/:title
 url: http://jenkner.org
 author: Stefan Jenkner
