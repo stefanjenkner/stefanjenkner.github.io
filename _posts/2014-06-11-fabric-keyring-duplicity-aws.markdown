@@ -59,14 +59,14 @@ def duplicity_env(hostname):
         'Access Key Id': 'AWS_ACCESS_KEY_ID',
         'Secret Access Key': 'AWS_SECRET_ACCESS_KEY',
     }
-    for key in to_env.keys():
+    for key,var in to_env.items():
         secret = keyring.get_password(hostname, key)
         if secret is None:
             print """Run: python -c \"import keyring;
             keyring.set_password('%s', '%s', 'PASSWORD')\"""" % (hostname, key)
             sys.exit(1)
         else:
-            kw[to_env[key]] = secret
+            kw[var] = secret
     return _setenv({'shell_env': kw})
 {% endhighlight %}
 
