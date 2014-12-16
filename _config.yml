@@ -6,12 +6,5 @@ highlighter: pygments
 permalink: /blog/:year/:month/:day/:title
 url: http://jenkner.org
 author: Stefan Jenkner
-
-sitemap:
-    file: "/sitemap.xml"
-    exclude:
-        - "/atom.xml"
-    include_posts:
-        - "/index.html"
-    change_frequency_name: "change_frequency"
-    priority_name: "priority"
+gems:
+  - jekyll-sitemap
