@@ -1,0 +1,8 @@
+language: ruby
+
+branches:
+  only:
+    - jekyll
+
+script:
+  - "bundle exec jekyll build"
