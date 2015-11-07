@@ -4,7 +4,7 @@ redcarpet:
     extensions: ["tables"]
 highlighter: pygments
 permalink: /blog/:year/:month/:day/:title
-url: http://sedden.github.io
+url: https://sedden.github.io
 author: Stefan Jenkner
 gems:
   - jekyll-sitemap
