@@ -21,6 +21,6 @@ after_success: |
     git reset origin/master
     git add .
     git commit -a -m "Travis CI build ${TRAVIS_BUILD_NUMBER}."
-    git push origin HEAD:master
+    git push origin HEAD:master >/dev/null 2>&1
     cd "${TRAVIS_BUILD_DIR}"
   fi
