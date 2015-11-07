@@ -8,3 +8,6 @@ url: http://sedden.github.io
 author: Stefan Jenkner
 gems:
   - jekyll-sitemap
+exclude:
+  - Gemfile
+  - Gemfile.lock

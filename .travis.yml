@@ -1,3 +1,5 @@
+sudo: false
+
 language: ruby
 
 branches:
@@ -6,3 +8,19 @@ branches:
 
 script:
   - "bundle exec jekyll build"
+
+after_success: |
+  if [ -n "${GITHUB_ACCESS_TOKEN}" ] && [ "${TRAVIS_BRANCH}" = 'jekyll' ] && [ "${TRAVIS_PULL_REQUEST}" = 'false' ]
+  then
+    cd "${TRAVIS_BUILD_DIR}/_site"
+    git init
+    git remote add origin "https://sedden:${GITHUB_ACCESS_TOKEN}@github.com/sedden/sedden.github.io"
+    git config user.name="Stefan Jenkner"
+    git config user.email="stefan@jenkner.org"
+    git fetch
+    git reset origin/master
+    git add .
+    git commit -a -m "Travis CI build ${TRAVIS_BUILD_NUMBER}."
+    git push origin HEAD:master
+    cd "${TRAVIS_BUILD_DIR}"
+  fi
