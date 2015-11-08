@@ -10,7 +10,7 @@ script:
   - "bundle exec jekyll build"
 
 after_success: |
-  if [ -n "${GITHUB_ACCESS_TOKEN}" ] && [ "${TRAVIS_BRANCH}" = 'jekyll' ] && [ "${TRAVIS_PULL_REQUEST}" = 'false' ]
+  if [ -n "${GITHUB_ACCESS_TOKEN}" ] && [ "${TRAVIS_PULL_REQUEST}" = 'false' ]
   then
     cd "${TRAVIS_BUILD_DIR}/_site"
     git init
