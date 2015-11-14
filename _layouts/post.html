@@ -8,16 +8,31 @@ layout: default
 {{ content }}
 </div>
 
+<!-- Flattr -->
 <div>
     <a class="FlattrButton" style="display:none;"
         title="{{ page.title }}"
         rel="flattr;uid:sedden;popout:0;category:text"
-        href="https://sedden.github.io{{ page.url }}">
+        href="{{ site.url }}{{ page.url }}">
     </a>
 </div>
 
-<div>
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+  this.page.url = '{{ site.url }}{{ page.url }}';
+  this.page.identifier = '{{ page.id }}';
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//sedden.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
 
+<div>
 
 {% if page.previous %}
 	<p><a href="{{ page.previous.url }}">« {{ page.previous.title }}</a></p>
