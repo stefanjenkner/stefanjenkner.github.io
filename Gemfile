@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '2.5.2'
-gem 'jekyll-sitemap', '0.7.0' 
+gem 'jekyll', '3.0.0'
+gem 'jekyll-sitemap', '0.9.0'
+gem 'pygments.rb', '0.6.3'
+gem 'redcarpet', '3.3.3'
