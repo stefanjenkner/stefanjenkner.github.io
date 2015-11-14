@@ -8,6 +8,7 @@ branches:
 
 script:
   - "bundle exec jekyll build"
+  - "bundle exec htmlproof ./_site --disable-external"
 
 after_success: |
   if [ -n "${GITHUB_ACCESS_TOKEN}" ] && [ "${TRAVIS_PULL_REQUEST}" = 'false' ]
@@ -24,3 +25,7 @@ after_success: |
     git push origin HEAD:master >/dev/null 2>&1
     cd "${TRAVIS_BUILD_DIR}"
   fi
+
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
