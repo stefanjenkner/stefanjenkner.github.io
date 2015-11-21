@@ -1,74 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+  {% include head.html %}
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+  <body>
 
-        <!-- Favicon -->
-        <link href="/favicon.png" rel="icon">
+    {% include header.html %}
 
-        <!-- OpenID -->
-        <link rel="openid2.provider" href="https://openid.stackexchange.com/openid/provider">
-        <link rel="openid2.local_id" href="https://openid.stackexchange.com/user/2cd92ecb-186e-42d2-839e-e1b36cc3d6fb">
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
 
-        <!-- Feed -->
-        <link type="application/atom+xml" rel="alternate" href="/atom.xml"/>
+    {% include footer.html %}
 
-		<!-- Flattr -->
-		<script type="text/javascript">
-        /* <![CDATA[ */
-		(function() {
-			var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-			s.type = 'text/javascript';
-			s.async = true;
-			s.src = '//api.flattr.com/js/0.6/load.js?mode=auto&button=compact&uid=test&category=text';
-			t.parentNode.insertBefore(s, t);
-		})();
-		/* ]]> */
-		</script>
+  </body>
 
-    </head>
-    <body>
-
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-            <a class="extra" href="/about/">about</a>
-            <a class="extra" href="/atom.xml">feed</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Stefan Jenkner<br />
-                stefan@jenkner.org
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/sedden">github.com/sedden</a><br />
-                <a href="https://twitter.com/sedden">twitter.com/sedden</a>
-                <a href="https://alpha.app.net/sedden">alpha.app.net/sedden</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Fork me on GitHub -->
-        <a href="https://github.com/sedden/sedden.github.io/">
-          <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
-        </a>
-
-    </body>
 </html>

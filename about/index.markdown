@@ -1,6 +1,6 @@
 ---
 layout: default
-title: A developer's notebook - about
+title: About
 ---
 
 ### Public Key (GPG):

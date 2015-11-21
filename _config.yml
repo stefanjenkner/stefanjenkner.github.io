@@ -1,14 +1,18 @@
-name: A developer's notebook
+name: A developers notebook
 markdown: redcarpet
 redcarpet:
     extensions: ["tables"]
 highlighter: pygments
 permalink: /blog/:year/:month/:day/:title/
-url: https://sedden.github.io
+url: "https://sedden.github.io"
+title: A developer's notebook
 author: Stefan Jenkner
+email: stefan@jenkner.org
 gems:
   - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+twitter_username: sedden
+github_username: sedden
