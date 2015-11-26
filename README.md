@@ -1,5 +1,5 @@
-[![Build Status](https://img.shields.io/travis/sedden/sedden.github.io/jekyll.svg?style=flat)](https://travis-ci.org/sedden/sedden.github.io)
+# A developer's notebook
 
-### A developer's notebook
+[![Build Status](https://travis-ci.org/sedden/sedden.github.io.svg?branch=jekyll)](https://travis-ci.org/sedden/sedden.github.io)
 
 This repository powers <https://sedden.github.io>.
