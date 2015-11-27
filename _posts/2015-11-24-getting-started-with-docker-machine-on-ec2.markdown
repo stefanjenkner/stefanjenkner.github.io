@@ -18,9 +18,10 @@ The required steps are:
 
 1. Create an new IAM user and attach a *Custom Policy* to the user
 2. Find out the VPC ID
-3. Create your first instance with [Docker Machine][docker-machine]
+3. Create the [Docker Machine][docker-machine] instance
 
 This guide applies to [Docker Machine][docker-machine] version 0.5.0 on OS X.
+
 
 #### Create an new IAM user and attach a Custom Policy to the user
 
@@ -34,7 +35,7 @@ export AWS_ACCESS_KEY_ID=AKI...
 export AWS_SECRET_ACCESS_KEY=...
 {% endhighlight %}
 
-Then select the user, switch to the *Permissions* tab and add new
+Then select the user, switch to the *Permissions* tab and add a new
 *Custom Policy* (expand Inline Policy to do so).
 The following policy was shared by
 [Brandon Mangold](https://github.com/bmangold) on
@@ -95,6 +96,7 @@ A slightly extended it with permissions for creating security groups:
 Replace `%AWS_ACCOUNT_ID%` with your account ID. Get it from: AWS console / My Account.
 I also changed the region to `eu-west-1`.
 
+
 #### Find out the VPC ID
 
 This step is also covered in the official drivers documentation.
@@ -106,7 +108,7 @@ export AWS_VPC_ID=vpc-....
 {% endhighlight %}
 
 
-#### Create your first instance with
+#### Create the docker machine
 
 Four environment variables have been populated:
 
@@ -134,7 +136,7 @@ Everything is fine, if the command above completes with the message:
 *"To see how to connect Docker to this machine, run: docker-machine env aws01"*
 If not so, check out the troubleshooting section below.
 
-As the new docker machine on EC2 is ready now, it's time to verfy the setup:
+To verify the setup, just run:
 
 {% highlight bash %}
 eval "$(docker-machine env aws01)" # setup DOCKER_* environment variables
@@ -145,6 +147,7 @@ docker-machine ssh aws01           # ssh into instance aws01
 {% endhighlight %}
 
 Use the docker-machine command to interact with the newly created EC2 instance.
+
 
 #### Troubleshooting
 
