@@ -8,7 +8,9 @@ categories: backup duplicity s3 storage duply amazon glacier
 This is kind of a cheat sheet on how to create a fully encrypted backup on
 [Amazon Glacier][glacier] with [Duplicity][duplicity] and [Duply][duply] (a
 frontend/wrapper for Duplicity) for as little as EUR 0,01 per gigabyte (plus
-transfer fees). 
+transfer fees).
+
+The required steps are:
 
  1. Get Duplicity version 0.6.26+, Duply version 1.9.1+, GnuPG and python-keyring
  2. Create a Bucket, setup permissions and create lifecycle rules
@@ -41,7 +43,7 @@ try `gnupg2` and `python3-keyring` if one of these packages cannot be found.
 Don't forget to remember the region when creating a new Bucket on the S3 Management Console.
 This time I chose Ireland (eu-west-1).
 
-When attach a lifecycle rule to the bucket. 
+When attach a lifecycle rule to the bucket.
 
  * Target: Objects with the prefix `_my_folder_to_backup/archive_`
  * Configuration: Archive to the Glacier Storage Class 1 days after the object's creation date.
@@ -158,7 +160,7 @@ I'm pretty happy with this backup solution, but there are some annoying parts as
  * The user policy is missing an action for moving Glacier class storage items back to standard class storage.
 
 In summary, it can be stated that this backup solution isn't perfect yet,
-but it's built upon Open-Source tools and it's easy to customize. 
+but it's built upon Open-Source tools and it's easy to customize.
 
 
 [aws]: https://aws.amazon.com/
