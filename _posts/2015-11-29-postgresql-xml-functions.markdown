@@ -87,9 +87,9 @@ multiple comments:
 </item>
 {% endhighlight %}
 
-For this case it's necessary to use a `LEFT JOIN` on comments and
+It is necessary to use a `LEFT JOIN` on comments and
 `GROUP BY p.id` (ID of the article) to also include articles without comments.
-To make it clear - the second column (count) of this select statement can be zero:
+To make it clear - the second column (count) of the following select statement can be zero:
 
 {% highlight sql %}
 SELECT p.id, COUNT(c.id)
