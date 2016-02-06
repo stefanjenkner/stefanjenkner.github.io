@@ -5,15 +5,17 @@ date:   2016-02-06 15:09:23
 categories: docker cubietruck armbian systemd
 ---
 
-To get started with [Docker][docker] on [Cubietruck][cubietruck] (also know as
-Cubieboard 3), it's necessary to switch to a more recent Vanilla kernel.
-My distribution of choice was [armbian][armbian] (a lightweight Linux
-distribution based on Debian Wheezy, Jessie or Ubuntu Trusty).
+To get started with [Docker][docker] on the [Cubietruck][cubietruck] (also know
+as Cubieboard 3), it's necessary to switch to a more recent vanilla kernel.
+I did not try to upgrade or switch the kernel of my current Lubuntu Server
+installation that runs on NAND storage, which is currently not supported by
+the Linux mainline kernel.
+So my distribution of choice was [armbian][armbian] -- a lightweight Linux
+distribution based on Debian Wheezy, Jessie or Ubuntu Trusty.
 
 ## Get armbian
 
-Prepare your SD-Card with Debian Jessie and the Vanilla kernel.
-My setup runs: Armbian_4.5_Cubietruck_Debian_jessie_4.2.3.zip.
+Prepare your SD-Card with Debian Jessie and the vanilla Linux kernel 4.2.3.
 Get it from here: <http://www.armbian.com/cubietruck/>
 
 ## Enable systemd
