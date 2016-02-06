@@ -6,8 +6,8 @@ categories: docker cubietruck armbian systemd
 ---
 
 To get started with [Docker][docker] on the [Cubietruck][cubietruck] (also know
-as Cubieboard 3), it's necessary to switch to a more recent vanilla kernel.
-I did not try to upgrade or switch the kernel of my current Lubuntu Server
+as Cubieboard 3), it's necessary to switch to a more recent Linux kernel.
+I did not try to upgrade the kernel of my current Lubuntu Server
 installation that runs on NAND storage, which is currently not supported by
 the Linux mainline kernel.
 So my distribution of choice was [armbian][armbian] -- a lightweight Linux
@@ -39,7 +39,7 @@ There is no need to recompile boot scripts.
 
 ## Install Docker
 
-Thanks to folks at [Hypriot][hypriot], it's quiet easy to get docker binaries
+Thanks to the folks at [Hypriot][hypriot], it's quiet easy to get docker binaries
 for the ARM architecture:
 
     wget "http://downloads.hypriot.com/docker-hypriot_1.10.0-1_armhf.deb"
