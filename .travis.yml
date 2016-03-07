@@ -8,7 +8,7 @@ branches:
 
 script:
   - "bundle exec jekyll build"
-  - "bundle exec htmlproof ./_site --disable-external --href-ignore '#'"
+  - "bundle exec htmlproofer ./_site --disable-external --allow-hash-href"
 
 after_success: |
   if [ -n "${GITHUB_ACCESS_TOKEN}" ] && [ "${TRAVIS_PULL_REQUEST}" = 'false' ]
