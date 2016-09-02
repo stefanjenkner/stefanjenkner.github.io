@@ -5,7 +5,7 @@ title: About
 
 ### Public Key (GPG):
 
-Key: [0x216903E7](http://keyserver.freenet.de:11371/pks/lookup?op=index&search=0x216903E7)
+Key: [0x216903E7](https://sks-keyservers.net/pks/lookup?op=index&search=0x216903E7&exact=on)
 
 Fingerprint:
 
