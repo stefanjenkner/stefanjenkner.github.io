@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/sedden
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://sedden.github.io
+  * I am sedden (https://keybase.io/sedden) on keybase.
+  * I have a public key ASDpJ26ej_h38iXCmk5BVU1w9_hO1fNk_m5KE8shE2DVswo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120e9276e9e8ff877f225c29a4e41554d70f7f84ed5f364fe6e4a13cb211360d5b30a",
+            "host": "keybase.io",
+            "kid": "0120e9276e9e8ff877f225c29a4e41554d70f7f84ed5f364fe6e4a13cb211360d5b30a",
+            "uid": "010480e132f54de791d41640b9b94419",
+            "username": "sedden"
+        },
+        "service": {
+            "hostname": "sedden.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.17"
+    },
+    "ctime": 1472849363,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1472849287,
+        "hash": "f700463b3c2bf6a9b066e1edf9b4f7cfedeba9a8650b0b01f91713850c58999f202857d5dd91621e5db6490160104b1f45b4c6aac59d0595145d7e5ec5566513",
+        "seqno": 616340
+    },
+    "prev": "8688446eb6f156929d286d3016fb5c3a188bb7c9c7a01aef4c6577eb0fa47ae1",
+    "seqno": 10,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg6Sduno/4d/IlwppOQVVNcPf4TtXzZP5uShPLIRNg1bMKp3BheWxvYWTFAvd7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZTkyNzZlOWU4ZmY4NzdmMjI1YzI5YTRlNDE1NTRkNzBmN2Y4NGVkNWYzNjRmZTZlNGExM2NiMjExMzYwZDViMzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZTkyNzZlOWU4ZmY4NzdmMjI1YzI5YTRlNDE1NTRkNzBmN2Y4NGVkNWYzNjRmZTZlNGExM2NiMjExMzYwZDViMzBhIiwidWlkIjoiMDEwNDgwZTEzMmY1NGRlNzkxZDQxNjQwYjliOTQ0MTkiLCJ1c2VybmFtZSI6InNlZGRlbiJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoic2VkZGVuLmdpdGh1Yi5pbyIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjE3In0sImN0aW1lIjoxNDcyODQ5MzYzLCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0NzI4NDkyODcsImhhc2giOiJmNzAwNDYzYjNjMmJmNmE5YjA2NmUxZWRmOWI0ZjdjZmVkZWJhOWE4NjUwYjBiMDFmOTE3MTM4NTBjNTg5OTlmMjAyODU3ZDVkZDkxNjIxZTVkYjY0OTAxNjAxMDRiMWY0NWI0YzZhYWM1OWQwNTk1MTQ1ZDdlNWVjNTU2NjUxMyIsInNlcW5vIjo2MTYzNDB9LCJwcmV2IjoiODY4ODQ0NmViNmYxNTY5MjlkMjg2ZDMwMTZmYjVjM2ExODhiYjdjOWM3YTAxYWVmNGM2NTc3ZWIwZmE0N2FlMSIsInNlcW5vIjoxMCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDEE6lMl+a5abhX35IwJAian/4b6QD9sdOn/7ICcd/Sjun0l0B7WPdT2zTNfqB1klHvrV7EfJez04XWf6K06okJqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgN2fzV9B/FUbR1m8b5QLeAnrB6c8DcrjAYMHJcD/g+xujdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sedden
+
+==================================================================
