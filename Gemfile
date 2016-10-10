@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'html-proofer', '3.3.0'
-gem 'jekyll', '3.2.1'
+gem 'jekyll', '3.3.0'
 gem 'jekyll-auto-image', '1.1.2'
 gem 'jekyll-email-protect', '1.0.3'
 gem 'jekyll-sitemap', '0.11.0'
