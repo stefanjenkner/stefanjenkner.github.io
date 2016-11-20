@@ -9,6 +9,7 @@ title: A developer's notebook
 author: Stefan Jenkner
 email: stefan@jenkner.org
 gems:
+  - jekyll-auto-image
   - jekyll-email-protect
   - jekyll-sitemap
 exclude:
