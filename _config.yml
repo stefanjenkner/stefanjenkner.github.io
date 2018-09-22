@@ -16,6 +16,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - [vendor]
+  - vendor
 twitter_username: sedden
 github_username: sedden
