@@ -15,7 +15,7 @@ after_success: |
   then
     cd "${TRAVIS_BUILD_DIR}/_site"
     git init
-    git remote add origin "https://sedden:${GITHUB_ACCESS_TOKEN}@github.com/sedden/sedden.github.io"
+    git remote add origin "https://stefanjenkner:${GITHUB_ACCESS_TOKEN}@github.com/stefanjenkner/stefanjenkner.github.io"
     git config user.name "Stefan Jenkner"
     git config user.email "stefan@jenkner.org"
     git fetch
