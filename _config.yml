@@ -1,7 +1,4 @@
 name: A developers notebook
-markdown: redcarpet
-redcarpet:
-    extensions: ["tables"]
 highlighter: rouge
 permalink: /blog/:year/:month/:day/:title/
 url: "https://stefanjenkner.github.io"
@@ -16,6 +13,10 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - vendor
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .jekyll-cache/
 twitter_username: stefanjenkner
 github_username: stefanjenkner
