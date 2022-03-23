@@ -5,8 +5,7 @@ url: "https://stefanjenkner.github.io"
 title: A developer's notebook
 author: Stefan Jenkner
 email: stefan@jenkner.org
-pligins:
-  - jekyll-auto-image
+plugins:
   - jekyll-email-protect
   - jekyll-sitemap
 exclude:
