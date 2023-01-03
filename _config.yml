@@ -17,5 +17,4 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - .jekyll-cache/
-twitter_username: stefanjenkner
 github_username: stefanjenkner
