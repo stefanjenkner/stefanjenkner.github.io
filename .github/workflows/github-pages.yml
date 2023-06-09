@@ -2,8 +2,9 @@ name: Build and deploy Jekyll site to GitHub Pages
 
 on:
   push:
-    branches:
-      - jekyll
+    branches: [ jekyll ]
+  pull_request:
+    branches: [ jekyll ]
 
 jobs:
   github-pages:
@@ -17,5 +18,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
       - uses: helaili/jekyll-action@v2
+        if: github.event_name == 'pull_request'
+        with:
+          build_only: true
+      - uses: helaili/jekyll-action@v2
+        if: github.event_name != 'pull_request'
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
