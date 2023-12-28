@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/stefanjenkner
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://stefanjenkner.github.io
+  * I am stefanjenkner (https://keybase.io/stefanjenkner) on keybase.
+  * I have a public key ASCPJiKbv-Jz5m2vjJKfIRzcAnrlvmx8ZkJkR30vS4EQZQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01208f26229bbfe273e66daf8c929f211cdc027ae5be6c7c664264477d2f4b8110650a",
+      "host": "keybase.io",
+      "kid": "01208f26229bbfe273e66daf8c929f211cdc027ae5be6c7c664264477d2f4b8110650a",
+      "uid": "eaacbfe1c35da77734b0638bded2e319",
+      "username": "stefanjenkner"
+    },
+    "merkle_root": {
+      "ctime": 1575407384,
+      "hash": "de57855b15dbf13b1b48470ee126b80d9043ccc0c3574e3201b2c26fc75f4943069150fb5b90f0aede32f940c2e9427b9c10463374cb6e38dce567673a85518e",
+      "hash_meta": "ecca92fc9bde2c77a038d11a273ca3747841a025ceb74615fda060d3e4f85a37",
+      "seqno": 12035904
+    },
+    "service": {
+      "entropy": "97VGnR1MeJ9ANTRi40SMJWom",
+      "hostname": "stefanjenkner.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.0.0"
+  },
+  "ctime": 1575407404,
+  "expire_in": 504576000,
+  "prev": "55bbcf52ac1a6ecda7cf37f1008bbb831a74210ee582566078c7a2e703576e08",
+  "seqno": 4,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgjyYim7/ic+Ztr4ySnyEc3AJ65b5sfGZCZEd9L0uBEGUKp3BheWxvYWTESpcCBMQgVbvPUqwabs2nzzfxAIu7gxp0IQ7lglZgeMei5wNXbgjEIHncdn+Vv3D5g30uMNOnpiYAi81pacTN017g2H4sc5zwAgHCo3NpZ8RAm3R4P1cIbx9gRHufS7gjm1JiYpXEqMbJ21dSQJuiy/xB6s/11HLA/VBqGo0xt4k2h/q6E0XI6Jf2p9f0AtroAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIFVRYmEr9WffBKCcfSvgYBCjN4K+K/mFen0yLaF9XXcWo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/stefanjenkner
+
+==================================================================
