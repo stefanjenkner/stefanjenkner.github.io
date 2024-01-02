@@ -1,4 +1,7 @@
+---
+layout: nil
+---
 User-agent: *
-Disallow: 
+Disallow:
 
-Sitemap: https://stefanjenkner.github.io/sitemap.xml 
+Sitemap: {{ site.url }}/sitemap.xml
