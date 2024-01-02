@@ -1,9 +1,7 @@
-_site/
-.jekyll-metadata
-.jekyll-cache/
-.sass-cache/
-.bundle/
+venv/
+__pycache__/
 
-vendor/
+output/
 
 .idea/
+.vscode/
