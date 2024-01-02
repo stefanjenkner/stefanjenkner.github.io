@@ -1,6 +1,5 @@
 ---
-layout: default
-title: About
+Title: About
 ---
 
 ### Public Key (GPG):
