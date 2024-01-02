@@ -4,6 +4,12 @@ SITEURL = ""
 
 PATH = "content"
 
+STATIC_PATHS = ["images", "extra/robots.txt", "extra/keybase.txt"]
+EXTRA_PATH_METADATA = {
+    "extra/robots.txt": {"path": "robots.txt"},
+    "extra/keybase.txt": {"path": "keybase.txt"},
+}
+
 TIMEZONE = 'Europe/Berlin'
 
 DEFAULT_LANG = 'en'
@@ -21,10 +27,15 @@ LINKS = (
 
 # Social widget
 SOCIAL = (
-    ("GitHub", "https://github.com/stefanjenkner"),
+    ("github", "https://github.com/stefanjenkner"),
+    ("mastodon", "https://dresden.network/@stefanjenkner"),
 )
 
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
+THEME = 'themes/Flex'
+
+GITHUB_CORNER_URL = "https://github.com/stefanjenkner/stefanjenkner.github.io"
