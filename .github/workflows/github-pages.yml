@@ -2,9 +2,9 @@ name: Build and deploy to GitHub Pages
 
 on:
   push:
-    branches: [ jekyll ]
+    branches: [ pelican ]
   pull_request:
-    branches: [ jekyll ]
+    branches: [ pelican ]
 
 jobs:
   github-pages:
