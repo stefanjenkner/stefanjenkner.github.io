@@ -1,6 +1,7 @@
 AUTHOR = 'Stefan Jenkner'
 SITENAME = "A developer's notebook"
 SITEURL = ""
+SITELOGO = SITEURL + "/images/profile.png"
 
 PATH = "content"
 
