@@ -43,13 +43,13 @@
  
 
 <meta name="author" content="Stefan Jenkner" />
-<meta name="description" content="The OnOff SHIM by Pimoroni is a convenient power switch for the Raspberry Pi. The official guide suggests to install a daemon to initiate a clean shutdown once the button is pressed. However, there is much simpler solution using device tree overlays avoiding addtional 3rd party tools." />
+<meta name="description" content="The OnOff SHIM by Pimoroni is a convenient power switch for the Raspberry Pi. The official guide suggests to install a daemon to initiate a clean shutdown once the button is pressed. However, there is much simpler solution using device tree overlays avoiding additional 3rd party tools." />
 <meta name="keywords" content="rapsberrypi, shim, onoff, bookworm">
 
 
   <meta property="og:site_name" content="A developer's notebook"/>
   <meta property="og:title" content="Setup Pimoroni OnOff SHIM using Device Tree Overlays"/>
-  <meta property="og:description" content="The OnOff SHIM by Pimoroni is a convenient power switch for the Raspberry Pi. The official guide suggests to install a daemon to initiate a clean shutdown once the button is pressed. However, there is much simpler solution using device tree overlays avoiding addtional 3rd party tools."/>
+  <meta property="og:description" content="The OnOff SHIM by Pimoroni is a convenient power switch for the Raspberry Pi. The official guide suggests to install a daemon to initiate a clean shutdown once the button is pressed. However, there is much simpler solution using device tree overlays avoiding additional 3rd party tools."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:url" content="/2024-03-30-pimoroni-onoff-shim-dtoverlay.html"/>
   <meta property="og:type" content="article"/>
@@ -146,7 +146,7 @@ rel="me"           href="https://dresden.network/@stefanjenkner"
   <div>
     <p>The <a href="https://shop.pimoroni.com/products/onoff-shim">OnOff SHIM by Pimoroni</a> is a convenient power switch for the Raspberry Pi.
 The official guide suggests to install a daemon to initiate a clean shutdown once the button is pressed.
-However, there is much simpler solution using device tree overlays avoiding addtional 3rd party tools.
+However, there is much simpler solution using device tree overlays avoiding additional 3rd party tools.
 Furthermore, the "old" daemon solution does no longer work on Debian Bookworm based distributions and is a using sysv-based init script.</p>
 <p>Given the <a href="https://pinout.xyz/pinout/onoff_shim">pinout of the shim</a>, the solution is to watch PIN 17 and initiates a clean shutdown when the button is pressed (pulled low). And just before the the Pi shuts down, PIN 4 is pulled low to completely cut the power. Enabling it is as easy as adding this to <code>/boot/firmware/config.txt</code> and reboot:</p>
 <div class="highlight"><pre><span></span><code>dtoverlay=gpio-shutdown,gpio_pin=17,active_low=1,gpio_pull=up

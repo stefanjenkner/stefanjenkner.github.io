@@ -148,7 +148,7 @@ If enabled, it expects the OS to reset the hardware watchdog every 15 seconds. O
 This can be handy when used as an audio player like <a href="https://volumio.com">Volumio</a> especially if the hardware is not easy to access.</p>
 <p>Given that <a href="http://0pointer.de/blog/projects/watchdog.html">systemd provides support for hardware watchdogs</a>,
 there is no need to install additional userspace tools for basic hardware reset functionality.
-As a prerequiste, <a href="https://developers.volumio.com/SSH%20Connection#how-to-enable-ssh">SSH must be enabled</a> temporarily in Volumio.
+As a prerequisite, <a href="https://developers.volumio.com/SSH%20Connection#how-to-enable-ssh">SSH must be enabled</a> temporarily in Volumio.
 After successful login, the Device Tree parameter for watchdog can be configured:</p>
 <div class="highlight"><pre><span></span><code>echo &#39;dtparam=watchdog=on&#39; |sudo tee -a /boot/userconfig.txt
 </code></pre></div>
