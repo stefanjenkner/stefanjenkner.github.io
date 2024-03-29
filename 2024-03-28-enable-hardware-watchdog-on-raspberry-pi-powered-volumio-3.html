@@ -43,13 +43,13 @@
  
 
 <meta name="author" content="Stefan Jenkner" />
-<meta name="description" content="Enable hardware watchdog on Raspberry Pi powered Volumio 3" />
+<meta name="description" content="The Raspberry Pi features a built-in hardware watchdog timer that automatically resets the system if it becomes unresponsive or freezes. This can be handy when used as an audio player like Volumio especially if the hardware is hard to access." />
 <meta name="keywords" content="volumio, rapsberrypi, watchdog">
 
 
   <meta property="og:site_name" content="A developer's notebook"/>
   <meta property="og:title" content="Enable hardware watchdog for Volumio 3 on Raspberry Pi"/>
-  <meta property="og:description" content="Enable hardware watchdog on Raspberry Pi powered Volumio 3"/>
+  <meta property="og:description" content="The Raspberry Pi features a built-in hardware watchdog timer that automatically resets the system if it becomes unresponsive or freezes. This can be handy when used as an audio player like Volumio especially if the hardware is hard to access."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:url" content="/2024-03-28-enable-hardware-watchdog-on-raspberry-pi-powered-volumio-3.html"/>
   <meta property="og:type" content="article"/>
@@ -144,16 +144,17 @@ rel="me"           href="https://dresden.network/@stefanjenkner"
 
   <div>
     <p>The Raspberry Pi features a built-in hardware watchdog timer that automatically resets the system if it becomes unresponsive or freezes.
-If enabled, it expects the OS to reset the hardware watchdog every 15 seconds - otherwise the hardware watchdog will initiate a system reboot.
-Given that <a href="http://0pointer.de/blog/projects/watchdog.html">systemd provides support for hardware watchdogs</a>,
-there is no need to install additional userspace tools - at least not for basic hardware reset functionality.</p>
-<p>As a prerequiste, <a href="https://developers.volumio.com/SSH%20Connection#how-to-enable-ssh">SSH must be enabled</a> temporarily in Volumio.
+If enabled, it expects the OS to reset the hardware watchdog every 15 seconds. Otherwise the hardware watchdog will initiate a system reboot.
+This can be handy when used as an audio player like <a href="https://volumio.com">Volumio</a> especially if the hardware is hard to access.</p>
+<p>Given that <a href="http://0pointer.de/blog/projects/watchdog.html">systemd provides support for hardware watchdogs</a>,
+there is no need to install additional userspace tools for basic hardware reset functionality.
+As a prerequiste, <a href="https://developers.volumio.com/SSH%20Connection#how-to-enable-ssh">SSH must be enabled</a> temporarily in Volumio.
 After successful login, the Device Tree parameter for watchdog can be configured:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;dtparam=watchdog=on&#39;</span><span class="w"> </span><span class="p">|</span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/boot/userconfig.txt
+<div class="highlight"><pre><span></span><code>echo &#39;dtparam=watchdog=on&#39; |sudo tee -a /boot/userconfig.txt
 </code></pre></div>
 
 <p>After reboot, the next step is to uncomment and change <code>RuntimeWatchdogSec</code> and <code>ShutdownWatchdogSec</code> in <code>/etc/systemd/system.conf</code></p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>vi<span class="w"> </span>/etc/systemd/system.conf
+<div class="highlight"><pre><span></span><code>sudo vi /etc/systemd/system.conf
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>RuntimeWatchdogSec=14
