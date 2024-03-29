@@ -43,18 +43,18 @@
  
 
 <meta name="author" content="Stefan Jenkner" />
-<meta name="description" content="The Raspberry Pi features a built-in hardware watchdog timer that automatically resets the system if it becomes unresponsive or freezes. This can be handy when used as an audio player like Volumio especially if the hardware is hard to access." />
+<meta name="description" content="The Raspberry Pi features a built-in hardware watchdog timer that automatically resets the system if it becomes unresponsive or freezes. This can be handy when used as an audio player like Volumio - especially if the hardware is not easy to access." />
 <meta name="keywords" content="volumio, rapsberrypi, watchdog">
 
 
   <meta property="og:site_name" content="A developer's notebook"/>
-  <meta property="og:title" content="Enable hardware watchdog for Volumio 3 on Raspberry Pi"/>
-  <meta property="og:description" content="The Raspberry Pi features a built-in hardware watchdog timer that automatically resets the system if it becomes unresponsive or freezes. This can be handy when used as an audio player like Volumio especially if the hardware is hard to access."/>
+  <meta property="og:title" content="Enable hardware watchdog on Raspberry Pi-powered Volumio audio player"/>
+  <meta property="og:description" content="The Raspberry Pi features a built-in hardware watchdog timer that automatically resets the system if it becomes unresponsive or freezes. This can be handy when used as an audio player like Volumio - especially if the hardware is not easy to access."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:url" content="/2024-03-28-enable-hardware-watchdog-on-raspberry-pi-powered-volumio-3.html"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2024-03-28 00:00:00+01:00"/>
-  <meta property="article:modified_time" content="2024-03-28 00:00:00+01:00"/>
+  <meta property="article:modified_time" content="2024-03-29 00:00:00+01:00"/>
   <meta property="article:author" content="/author/stefan-jenkner.html">
   <meta property="article:section" content="Audio"/>
   <meta property="article:tag" content="volumio"/>
@@ -62,7 +62,7 @@
   <meta property="article:tag" content="watchdog"/>
   <meta property="og:image" content="/images/profile.png">
 
-  <title>A developer's notebook &ndash; Enable hardware watchdog for Volumio 3 on Raspberry Pi</title>
+  <title>A developer's notebook &ndash; Enable hardware watchdog on Raspberry Pi-powered Volumio audio player</title>
 
 
 </head>
@@ -134,7 +134,7 @@ rel="me"           href="https://dresden.network/@stefanjenkner"
 <article>
   <header>
       
-    <h1 id="2024-03-28-enable-hardware-watchdog-on-raspberry-pi-powered-volumio-3">Enable hardware watchdog for Volumio 3 on Raspberry Pi</h1>
+    <h1 id="2024-03-28-enable-hardware-watchdog-on-raspberry-pi-powered-volumio-3">Enable hardware watchdog on Raspberry Pi-powered Volumio audio player</h1>
     <p>
       Posted on Thu 28 March 2024 in <a href="/category/audio.html">Audio</a>
 
@@ -145,7 +145,7 @@ rel="me"           href="https://dresden.network/@stefanjenkner"
   <div>
     <p>The Raspberry Pi features a built-in hardware watchdog timer that automatically resets the system if it becomes unresponsive or freezes.
 If enabled, it expects the OS to reset the hardware watchdog every 15 seconds. Otherwise the hardware watchdog will initiate a system reboot.
-This can be handy when used as an audio player like <a href="https://volumio.com">Volumio</a> especially if the hardware is hard to access.</p>
+This can be handy when used as an audio player like <a href="https://volumio.com">Volumio</a> especially if the hardware is not easy to access.</p>
 <p>Given that <a href="http://0pointer.de/blog/projects/watchdog.html">systemd provides support for hardware watchdogs</a>,
 there is no need to install additional userspace tools for basic hardware reset functionality.
 As a prerequiste, <a href="https://developers.volumio.com/SSH%20Connection#how-to-enable-ssh">SSH must be enabled</a> temporarily in Volumio.
