@@ -1,2 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>A developer's notebook</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2024-03-15T05:35:36Z</updated><subtitle>A developer's notebook</subtitle></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>A developer's notebook</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2024-03-28T00:00:00+01:00</updated><subtitle>A developer's notebook</subtitle><entry><title>Enable hardware watchdog for Volumio 3 on Raspberry Pi</title><link href="/2024-03-28-enable-hardware-watchdog-on-raspberry-pi-powered-volumio-3.html" rel="alternate"></link><published>2024-03-28T00:00:00+01:00</published><updated>2024-03-28T00:00:00+01:00</updated><author><name>Stefan Jenkner</name></author><id>tag:None,2024-03-28:/2024-03-28-enable-hardware-watchdog-on-raspberry-pi-powered-volumio-3.html</id><summary type="html">&lt;p&gt;Enable hardware watchdog on Raspberry Pi powered Volumio 3&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Raspberry Pi features a built-in hardware watchdog timer that automatically resets the system if it becomes unresponsive or freezes.
+If enabled, it expects the OS to reset the hardware watchdog every 15 seconds - otherwise the hardware watchdog will initiate a system reboot.
+Given that &lt;a href="http://0pointer.de/blog/projects/watchdog.html"&gt;systemd provides support for hardware watchdogs&lt;/a&gt;,
+there is no need to install additional userspace tools - at least not for basic hardware reset functionality.&lt;/p&gt;
+&lt;p&gt;As a prerequiste, &lt;a href="https://developers.volumio.com/SSH%20Connection#how-to-enable-ssh"&gt;SSH must be enabled&lt;/a&gt; temporarily in Volumio.
+After successful login, the Device Tree parameter for watchdog can be configured:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;dtparam=watchdog=on&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;tee&lt;span class="w"&gt; &lt;/span&gt;-a&lt;span class="w"&gt; &lt;/span&gt;/boot/userconfig.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After reboot, the next step is to uncomment and change &lt;code&gt;RuntimeWatchdogSec&lt;/code&gt; and &lt;code&gt;ShutdownWatchdogSec&lt;/code&gt; in &lt;code&gt;/etc/systemd/system.conf&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;vi&lt;span class="w"&gt; &lt;/span&gt;/etc/systemd/system.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;RuntimeWatchdogSec=14
+ShutdownWatchdogSec=2min
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;RuntimeWatchdogSec=14&lt;/code&gt; - controls the keep-alive ping interval but systemd pings the hardware at half the specified interval (every 7 seconds)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ShutdownWatchdogSec=2min&lt;/code&gt; - controls the watchdog interval to use during reboots&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The changes can applied via &lt;code&gt;sudo systemctl daemon-reload&lt;/code&gt; (or a reboot) and tested via
+the classic &lt;a href="https://en.wikipedia.org/wiki/Fork_bomb"&gt;fork bomb&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;:&lt;span class="o"&gt;(){&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;:&lt;span class="p"&gt;|&lt;/span&gt;:&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;}&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Once executed, the system will become unresponsive so the watchdog initiates a reboot.&lt;/p&gt;</content><category term="Audio"></category><category term="volumio"></category><category term="rapsberrypi"></category><category term="watchdog"></category></entry></feed>
