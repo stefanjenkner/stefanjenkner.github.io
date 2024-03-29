@@ -13,7 +13,7 @@ This can be handy when used as an audio player like [Volumio](https://volumio.co
 
 Given that [systemd provides support for hardware watchdogs](http://0pointer.de/blog/projects/watchdog.html),
 there is no need to install additional userspace tools for basic hardware reset functionality.
-As a prerequiste, [SSH must be enabled](https://developers.volumio.com/SSH%20Connection#how-to-enable-ssh) temporarily in Volumio.
+As a prerequisite, [SSH must be enabled](https://developers.volumio.com/SSH%20Connection#how-to-enable-ssh) temporarily in Volumio.
 After successful login, the Device Tree parameter for watchdog can be configured:
 
 ```
