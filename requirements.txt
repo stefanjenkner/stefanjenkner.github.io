@@ -1,5 +1,5 @@
 anyio==4.3.0
-blinker==1.7.0
+blinker==1.8.1
 docutils==0.21.1
 feedgenerator==2.1.0
 idna==3.7
