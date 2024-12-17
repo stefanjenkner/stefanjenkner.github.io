@@ -2,7 +2,7 @@ Title: Enable hardware watchdog on Raspberry Pi-powered Volumio audio player
 Date: 2024-03-28 00:00
 Modified: 2024-03-29 00:00
 Category: Audio
-Tags: volumio, rapsberrypi, watchdog
+Tags: volumio, raspberrypi, watchdog
 Slug: 2024-03-28-enable-hardware-watchdog-on-raspberry-pi-powered-volumio-3
 Authors: Stefan Jenkner
 Summary: The Raspberry Pi features a built-in hardware watchdog timer that automatically resets the system if it becomes unresponsive or freezes. This can be handy when used as an audio player like Volumio - especially if the hardware is not easy to access.
@@ -20,7 +20,7 @@ After successful login, the Device Tree parameter for watchdog can be configured
 echo 'dtparam=watchdog=on' |sudo tee -a /boot/userconfig.txt
 ```
 
-After reboot, the next step is to uncomment and change `RuntimeWatchdogSec` and `ShutdownWatchdogSec` in `/etc/systemd/system.conf`
+After reboot, the next step is to comment out and change `RuntimeWatchdogSec` and `ShutdownWatchdogSec` in `/etc/systemd/system.conf`
 
 ```
 sudo vi /etc/systemd/system.conf

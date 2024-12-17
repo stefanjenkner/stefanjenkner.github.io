@@ -1,0 +1,12 @@
+Jenkner
+
+# company or product names
+[Oo]n[Oo]ff
+[Pp]imoroni
+[Vv]olumio
+Raspberry Pi
+
+# technical terms or tags
+systemd
+userspace
+raspberrypi
