@@ -18,3 +18,8 @@ repos:
     rev: v3.9.1
     hooks:
       - id: vale
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.30.0
+    hooks:
+      - id: check-github-workflows
+      - id: check-dependabot
