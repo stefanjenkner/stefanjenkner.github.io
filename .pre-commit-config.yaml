@@ -10,7 +10,11 @@ repos:
       - id: check-toml
       - id: check-added-large-files
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.0.0
+    rev: v4.1.0
     hooks:
       - id: commitizen
         stages: [ commit-msg ]
+  - repo: https://github.com/errata-ai/vale
+    rev: v3.9.1
+    hooks:
+      - id: vale

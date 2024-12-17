@@ -10,3 +10,6 @@ Raspberry Pi
 systemd
 userspace
 raspberrypi
+
+# GPG keys
+0x[0-9A-Fa-f]{8}
