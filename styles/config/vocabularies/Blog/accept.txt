@@ -1,0 +1,15 @@
+Jenkner
+
+# company or product names
+[Oo]n[Oo]ff
+[Pp]imoroni
+[Vv]olumio
+Raspberry Pi
+
+# technical terms or tags
+systemd
+userspace
+raspberrypi
+
+# GPG keys
+0x[0-9A-Fa-f]{8}

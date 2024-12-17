@@ -13,14 +13,17 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
+      - uses: errata-ai/vale-action@v2.1.1
+        with:
+          files: content/
       - uses: actions/setup-python@v5
         with:
           cache: 'pip'
-      - name: Install dependencies
+      - name: install dependencies
         run: pip install -r requirements.txt
-      - name: Build
+      - name: generate output
         run: pelican -v
-      - name: Publish
+      - name: publish
         if: github.event_name != 'pull_request'
         uses: peaceiris/actions-gh-pages@v4
         with:
