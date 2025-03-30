@@ -5,7 +5,7 @@ SITENAME = "A developer's notebook"
 SITETITLE = "Stefan Jenkner"
 SITESUBTITLE = "A developer's notebook"
 SITEURL = ""
-SITELOGO = SITEURL + "/images/profile.png"
+SITELOGO = SITEURL + "/images/profile_2025.png"
 
 PATH = "content"
 
