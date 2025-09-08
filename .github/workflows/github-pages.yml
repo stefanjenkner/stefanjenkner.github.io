@@ -16,7 +16,7 @@ jobs:
       - uses: errata-ai/vale-action@v2.1.1
         with:
           files: content/
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           cache: 'pip'
       - name: install dependencies
